@@ -1,0 +1,16 @@
+Config { font = "-*-Terminus-*-12-*-*-*-*-*-*-*"
+       , bgColor = "#232323"
+       , fgColor = "#ffeead"
+       , border = FullB
+       , borderColor = "#81a3d0"
+       , position = Bottom 100
+       , lowerOnStart = False
+       , commands = [ Run Weather "KDHN" ["-t"," <tempF>°F","-L","32","-H","85","--normal","#607c8c","--high","#FF9900","--low","#0099FF"] 48000
+                    , Run Date "%A %B %_d" "date" 10
+                    , Run Date "%H:%M:%S" "deta" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %StdinReader% }{<fc=#fd89aa>%date%</fc> <fc=#7ee479>%deta%</fc> <fc=#ff6f69>%KDHN%</fc> "
+       }

@@ -1,0 +1,26 @@
+Config { font = "-*-Terminus-*-12-*-*-*-*-*-*-*"
+       , bgColor = "#232323"
+       , fgColor = "#ffeead"
+       , border = FullB
+       , borderColor = "#81a3d0"
+       , position = Static { xpos = 1920 , ypos = 1066 , width = 1920 , height = 14}
+       , lowerOnStart = False
+       , persistent = True
+       , hideOnStart = False
+       , overrideRedirect = True
+       , allDesktops = True
+       , commands = [ Run MultiCpu ["-t","<autobar>"] 10
+                    , Run Memory ["-t","Mem:<usedbar>|<freebar>"] 10
+                    , Run CpuFreq ["-t", "<cpu0>"] 1200
+                    , Run DiskU [("/", "<usedbar>"), ("sdb1","<usedbar>")] ["-L", "20","-H", "75", "-m", "1", "-p", "3"] 1200
+                    , Run Wireless "wlan0" ["-t", "<qualitybar>"] 10
+                    , Run Network "wlan0" ["-t","<rx>k|<tx>k"] 10
+                    , Run Com "bash" ["getvolume.sh"] "getvolume" 100
+                    , Run Com "uptime" ["-p"] "uptime" 600
+                    , Run Com "cat" ["/proc/loadavg"] "load" 50
+                    , Run CoreTemp ["-t","<core0>-<core1>-<core2>-<core3>-<core4>°C","-L","45","-H","75","-l","#98cbfe","-h","red"] 50
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "Vol:%getvolume% <fc=#cb98fe>%disku%</fc> %uptime% %load% }{<fc=#88d8b0>GPU:%gpu_temp.sh%°C</fc> | <fc=#98cbfe>CPU:%coretemp% %cpufreq%</fc> <fc=#fd89aa>%multicpu%</fc> | <fc=#7ee479>%memory%</fc> | <fc=#88d8b0>%wireless.sh% %wlan0% %wlan0wi%</fc> "
+       }
