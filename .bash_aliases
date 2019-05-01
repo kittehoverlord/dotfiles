@@ -4,7 +4,6 @@ alias la='ls -a --color=auto'
 alias lah='ls -lah --color=auto'
 alias lh='ls -lh --color=auto'
 alias setinx='xset s off s noblank s noexpose -dpms'
-alias bgset='feh Pics/woven2.png --bg-tile'
 alias surch='apt-cache search'
 alias show='apt-cache show'
 alias showall='apt-cache showpkg'
@@ -22,7 +21,7 @@ alias aptclean='clean; remove; check'
 ##sigh
 alias freakhi=' cpufreq-set -g performance -c 0;  cpufreq-set -g performance -c 1;  cpufreq-set -g performance -c 2;  cpufreq-set -g performance -c 3;  cpufreq-set -g performance -c 4;  cpufreq-set -g performance -c 5;  cpufreq-set -g performance -c 6;  cpufreq-set -g performance -c 7'
 alias freaklo=' cpufreq-set -g ondemand -c 0;  cpufreq-set -g ondemand -c 1;  cpufreq-set -g ondemand -c 2;  cpufreq-set -g ondemand -c 3;  cpufreq-set -g ondemand -c 4;  cpufreq-set -g ondemand -c 5;  cpufreq-set -g ondemand -c 6;  cpufreq-set -g ondemand -c 7'
-alias strtup='setinx ; bgset ; xscreensaver -nosplash &'
+alias strtup='setinx ; xscreensaver -nosplash &'
 
 ##mockery
 alias gayscrotum="scrot -u poop.png && convert poop.png -set filename:magic '%wx%h_%b-%k_%i' \( +clone -background black -shadow 80x20+0+15 \) +swap -background none -layers merge +repage '%[filename:magic]' ; pngnq *_poop.png && rm *poop.png"
@@ -40,8 +39,6 @@ alias poopup="notify-send  -i /home/ron/Pics/cats/medium.jpg -u critical $1 $2"
 alias scrotum="scrot -u 'poop.png' && pngnq poop.png && rm poop.png"
 
 alias scrotums="scrot 'poop.png' && pngnq poop.png && rm poop.png"
-
-alias fetch="~/bin/screenfetch-dev"
 
 ##dual screen
 
