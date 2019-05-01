@@ -1,0 +1,24 @@
+Repeat = yes
+Shuffle = no
+AutoNext = yes
+ALSADevice = default
+ALSAMixer1 = Master
+ALSAMixer2 = Headphone
+Softmixer_SaveState = yes
+Equalizer_SaveState = yes
+
+Theme = mightly_theme
+AutoLoadLyrics = no
+MOCDir = ~/.moc
+UseMMap = no
+UseMimeMagic = yes
+SavePlaylist = yes
+ASCIILines = yes
+Seektime = 1
+SilentSeektime = 1
+ResampleMethod = SincFastest
+Allow24bitOutput = yes
+PlaylistNumbering = no
+FollowPlayedFile = yes
+CanStartInPlaylist = yes
+MessageLingerTime = 1
