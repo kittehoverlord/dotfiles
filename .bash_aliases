@@ -42,9 +42,11 @@ alias scrotums="scrot 'poop.png' && pngnq poop.png && rm poop.png"
 
 ##dual screen
 
-alias leftmain='xrandr --output HDMI-1 --mode 1360x768 --rate 60 --right-of VGA-0'
+alias tvmain='xrandr --output HDMI-1 --mode 1360x768 --rate 60 --right-of VGA-0'
 
-alias onemon='xrandr --output VGA-0 --off'
+alias onemon='xrandr --output VGA-1 --off'
+
+alias lapoff='xrandr --output LVDS-1 --off'
 
 ##record
 
