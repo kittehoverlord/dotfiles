@@ -48,6 +48,6 @@ main = do
         , ((0, xK_Print), spawn "scrot poop.png")
         ]
 myNormalBorderColor = "#232323"
-myFocusedBorderColor = "#666666"
+myFocusedBorderColor = "#FFFFFF"
 myTerminal = "xfce4-terminal"
 myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "min"]
